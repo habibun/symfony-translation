@@ -6,4 +6,11 @@
     <div class="example-wrapper">
         <a href="{{ path('app_homepage') }}">Homepage</a>
     </div>
+
+    {% trans %}Hello %name%{% endtrans %}
+    <br>
+
+    {% transchoice count %}
+        {0} There are no apples|{1} There is one apple|]1,Inf[ There are %count% apples
+    {% endtranschoice %}
 {% endblock %}
