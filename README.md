@@ -8,10 +8,6 @@ Implements translation component in symfony
 
 Read [Translation Docs](https://symfony.com/doc/4.4/translation.html)
 
-### Resources  
-- [xxx](xxx)
-
-
 ### License
 The code is licensed under the [MIT License](https://github.com/habibun/symfony-translation/blob/master/LICENSE)
 
