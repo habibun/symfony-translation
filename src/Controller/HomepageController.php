@@ -16,18 +16,12 @@ class HomepageController extends AbstractController
     public function index(Request $request, TranslatorInterface $translator): Response
     {
 //        $translated = $translator->trans('Symfony is great');
-//        $locale = $request->getLocale();
 
-        $count = rand(1, 100);
-        $name = sprintf('name_%d', $count);
-        $translated = $translator->trans('Hello '.$name);
-
-//        dd($translated);
+        $name = rand(1, 4);
 
         return $this->render('homepage/index.html.twig', [
-            'translated' => $translated,
-            'name' => $name,
-            'count' => $count,
+            'name' => 'name_'.$name,
+            'count' => 0,
         ]);
     }
 }

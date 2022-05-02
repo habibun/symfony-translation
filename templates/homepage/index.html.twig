@@ -1,16 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}Homepage!{% endblock %}
 
 {% block body %}
-    <div class="example-wrapper">
+    <p>
         <a href="{{ path('app_homepage') }}">Homepage</a>
-    </div>
+    </p>
 
-    {% trans %}Hello %name%{% endtrans %}
-    <br>
+    <p>
+        {% set message = 'Symfony is great' %}
+        {{ message|trans }}
+    </p>
 
-    {% transchoice count %}
-        {0} There are no apples|{1} There is one apple|]1,Inf[ There are %count% apples
-    {% endtranschoice %}
+    <p>
+        {% trans %}Hello %name%{% endtrans %}
+    </p>
+
+    <p>
+        {% transchoice count %}
+            {0} There are no apples|{1} There is one apple|]1,Inf[ There are %count% apples
+        {% endtranschoice %}
+    </p>
 {% endblock %}
